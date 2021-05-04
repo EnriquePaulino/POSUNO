@@ -21,9 +21,11 @@ namespace POSUNO.Helpers
                     ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
                 };
 
+                string url = Setting.GetApiUrl();
                 HttpClient client = new HttpClient(handler)
                 {
-                    BaseAddress = new Uri("https://localhost:44372/")
+                    //BaseAddress = new Uri("https://localhost:44372/")
+                    BaseAddress = new Uri(url)
                 };
 
                 HttpResponseMessage response = await client.PostAsync("api/Account/Login", content);

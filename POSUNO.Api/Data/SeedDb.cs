@@ -28,7 +28,7 @@ namespace POSUNO.Api.Data
             if (!_context.Users.Any())
             {
                 _context.Users.Add(new User { Email = "paulino@gmail.com", FirstName = "Enrique", LastName = "Paulino", Password = "123456" });
-                _context.Users.Add(new User { Email = "Ean@gmail.com", FirstName = "Ean", LastName = "Yadier", Password = "123456" });
+                _context.Users.Add(new User { Email = "ean@gmail.com", FirstName = "Ean", LastName = "Yadier", Password = "123456" });
                 await _context.SaveChangesAsync();
             }
         }
@@ -40,7 +40,7 @@ namespace POSUNO.Api.Data
                 User user = await _context.Users.FirstOrDefaultAsync();
                 for (int i = 1; i <= 50; i++)
                 {
-                    _context.Customers.Add(new Customer { FirstName = $"Cliente {i}", LastName = $"Apellido {i}", Phonenumber = "322 311 4620", Address = "Calle Luna Calle Sol", Email = $"cliente{i}@yopmail.com", IsActive = true, User = user });
+                    _context.Customers.Add(new Customer { FirstName = $"Cliente {i}", LastName = $"Apellido {i}", Phonenumber = "322 311 4620", Address = "Calle Luna Calle Sol", Email = $"cliente{i}@gmail.com", IsActive = true, User = user });
                 }
 
                 await _context.SaveChangesAsync();
