@@ -2,7 +2,7 @@
 
 namespace POSUNO.Helpers
 {
-    public class Setting
+    public class Settings
     {
         private static readonly ApplicationDataContainer _localSettings = ApplicationData.Current.LocalSettings;
 
